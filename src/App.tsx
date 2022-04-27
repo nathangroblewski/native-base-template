@@ -13,6 +13,7 @@ import {
   Box
 } from 'native-base';
 import { NativeBaseIcon } from '@components';
+import { registerRootComponent } from 'expo';
 
 // Define the config
 const config = {
@@ -26,7 +27,7 @@ type MyThemeType = typeof theme;
 declare module 'native-base' {
   interface ICustomTheme extends MyThemeType {}
 }
-export default function App() {
+const App = () => {
   return (
     <NativeBaseProvider>
       <Center
@@ -66,7 +67,7 @@ export default function App() {
       </Center>
     </NativeBaseProvider>
   );
-}
+};
 
 // Color Switch Component
 function ToggleDarkMode() {
@@ -85,3 +86,5 @@ function ToggleDarkMode() {
     </HStack>
   );
 }
+
+export default registerRootComponent(App);
