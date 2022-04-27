@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.25",
+    "axios": "^0.27.1",
     "expo": "~42.0.0",
     "expo-status-bar": "~1.0.4",
     "native-base": "3.4.0",
